@@ -1,0 +1,140 @@
+.hamburger {
+    cursor: pointer;
+    width: 22px;
+    height: 14px;
+    position: relative;
+
+    &__line {
+        width: 100%;
+        height: 3px;
+        background-color: $blue;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        transition: .3s;
+        opacity: 1;
+    }
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $blue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .3s;
+    }
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .3s;
+    }
+}
+.active.hamburger {
+    height: 17px;
+
+    .hamburger__line {
+        opacity: 0;
+        left: -100%;
+    }
+
+    &:before {
+        transition: .3s;
+        top: 7px;
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        top: 7px;
+        transform: rotate(-45deg);
+    }
+}
+
+.menu-top {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0;
+    z-index: 9999;
+    overflow: hidden;
+    transition: height .3s;
+    background-color: $lightgray;
+
+    &__wrapper {
+        padding: 30px 20px 40px 20px;
+    }
+
+    &__link {
+        font-weight: bold;
+        font-size: $normal-font;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: black;
+        transition: .3s;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__item {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.menu-top.active {
+    height: 100%;
+}
+
+.menu-top__link.active {
+    color: $blue;
+}
+
+@media(min-width:$large) {
+    .hamburger {
+        display: none;
+    }
+
+    .menu-top {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        z-index: 9999;
+        overflow: hidden;
+        transition: .3s;
+        background-color: transparent;
+        flex: 1;
+        max-width: 760px;
+
+        &__wrapper {
+            padding: 0;
+        }
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__item {
+            margin-bottom: 0;
+        }
+    }
+}
