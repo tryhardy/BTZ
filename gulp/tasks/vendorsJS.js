@@ -8,7 +8,7 @@ const vendorsScripts = [
 module.exports = function vendors(cb) {
   return vendorsScripts.length
     ? gulp.src(vendorsScripts)
-      .pipe(concat('libs.js'))
+      //.pipe(concat('libs.js'))
       .pipe(gulp.dest('dist/static/js/'))
     : cb();
 };

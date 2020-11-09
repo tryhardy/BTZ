@@ -2,6 +2,12 @@
     &__list {
         display: flex;
         align-items: center;
+
+        &--grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 15px;
+        }
     }
 
     &__item {
@@ -20,6 +26,12 @@
         
         &__item {
             margin-right: 60px;
+        }
+
+        &__list {
+            &--grid-2 {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
         }
     }
 }

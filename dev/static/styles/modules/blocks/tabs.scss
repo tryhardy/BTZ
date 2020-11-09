@@ -1,0 +1,159 @@
+.tabs {
+    &__titles {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 131.5%;
+        padding: 5px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #5F5F5F;
+        mix-blend-mode: normal;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    &__title.active {
+        color: $blue;
+    }
+
+    &__content {
+        padding-left: 20px;
+        position: relative;
+        height: 90vw;
+        overflow: hidden;
+    }
+
+    &__block {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: opacity .3s;
+        z-index: 1;
+        padding-left: 20px;
+    }
+
+    &__block.active {
+        opacity: 1;
+        z-index: 10;
+        transition: opacity .3s;
+    }
+}
+
+.images{
+
+    &__item {
+        margin-right: 10px;
+        padding: 10px;
+        background-color: white;
+        height: 80vw;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__wrapper {
+        min-width: 120vw;
+    }
+}
+
+@media(min-width: $medium){
+    .tabs {
+        &__content {
+            height: 60vw;
+        }
+
+        &__block {
+
+        }
+    }
+
+    .images {
+        &__item {
+            height: 55vw;
+        }
+    }
+}
+
+@media(min-width: $large){
+    .tabs-section {
+        .title {
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+    }
+
+    .tabs {
+        &__titles {
+            margin-top: 50px;
+            margin-bottom: 35px;
+            display: flex;
+        }
+
+        &__title {
+            font-size: 20px;
+            margin-right: 50px;
+        }
+
+        &__content {
+            height: 33vw;
+        }
+
+        &__block {
+            padding-left: 0;
+        }
+    }
+
+    .images {
+        &__wrapper {
+            min-width: min-content;
+            max-width: 100%;
+            padding: 0 20px;
+            margin: auto;
+            width: 100%;
+            max-width: 1180px;
+        }
+
+        &__item {
+            margin-right: 20px;
+            height: 31vw;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media(min-width:$extralarge){
+    .images {
+        &__item {
+            height: 380px;
+        }
+    }
+
+    .tabs {
+        &__content {
+            height: 400px;
+            margin-bottom: 100px;
+        }
+    }
+}

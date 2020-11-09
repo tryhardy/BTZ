@@ -1,7 +1,11 @@
 .index-page {
-    // .header__logo {
-    //     opacity: 0 ;
-    // }
+    .header__logo {
+        visibility: hidden;
+    }
+
+    .header__menu{
+        flex: 1;
+    }
 }
 
 .header {
@@ -13,13 +17,20 @@
     z-index: 9999;
 
     &__logo {
-        display: none;
+        order: 2;
+        flex: 1;
+
+        img {
+            max-height: 32px;
+            margin-left: 20px;
+        }
     } 
     &__button {
         width: 50px;
         height: 45px;
         background-color: $blue;
         margin-right: -20px;
+        order: 4;
 
         a {
             display: flex;
@@ -40,11 +51,12 @@
     }
 
     &__menu {
-        flex: 1;
+        order: 1;
     }
 
     &__lang {
         margin-right: 10px;
+        order: 3;
     }
 
     &__wrapper {
@@ -62,6 +74,7 @@
             height: 95px;
             display: flex;
             padding: 20px 40px;
+            
 
             span {
                 display: block;
@@ -80,6 +93,12 @@
 
         &__menu {
             margin-right: 20px;
+            order: 3;
+            flex: 1;
+        }
+
+        &__logo {
+            display: none;
         }
     }
 }
@@ -90,8 +109,9 @@
     }
 
     .header__button {
-        margin-right: 0px;
+        margin-right: -20px;
     }
+
 }
 
 
@@ -99,9 +119,15 @@
     .header {
         &__logo {
             display: block;
-            visibility: hidden;
-            width: 85px;
+            visibility: visible;
+            max-width: 80px;
             margin-right: 40px;
+            
+            img {
+                max-height: 100%;
+                margin-left: 0;
+            }
         } 
     }
+
 }

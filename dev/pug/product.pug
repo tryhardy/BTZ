@@ -1,0 +1,30 @@
+block variables
+	-var title = 'Квадратные стальные электросварные трубы'
+
+block content
+	.product
+		h2.title Квадратные стальные электросварные трубы
+	
+		.slides
+			.slides__list#product-slider
+				.slides__item(style="background-image:url(static/images/content/metal.png)")
+					img(src="static/images/content/metal.png")
+					.slides__bg
+				.slides__item(style="background-image:url(static/images/content/metal-5.png)")
+					img(src="static/images/content/metal-5.png")
+					.slides__bg
+				.slides__item(style="background-image:url(static/images/content/metal.png)")
+					img(src="static/images/content/metal.png")
+					.slides__bg
+				.slides__item(style="background-image:url(static/images/content/metal-5.png)")
+					img(src="static/images/content/metal-5.png")
+					.slides__bg
+			.slides__arrows
+				a.slides__prev#product-prev prev
+				a.slides__next#product-next next
+
+		p Квадратные стальные электросварные трубы общего назначения изготавливаются из углеродистой стали в соответствии с ГОСТ 8639-82, ГОСТ 13663-86, ТУ 1373-013-02949352-2011, ТУ 1373-032-02949352-2013
+
+		a(data-input="Квадратные стальные электросварные трубы").button Отправить заявку 
+
+		script(src="static/js/product-slider.js")

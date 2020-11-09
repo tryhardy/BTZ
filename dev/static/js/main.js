@@ -51,8 +51,106 @@ $(document).ready(function(){
     $('.slides__list').slick({
         infinite: true,
         arrows: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
         prevArrow: $('.slides__prev'),
         nextArrow: $('.slides__next'),
     });
 
+    $('.images__list').slick({
+        infinite: true,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 2
+                }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+
+    $('.timeline__list').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: $('.timeline__prev'),
+        nextArrow: $('.timeline__next'),
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 2
+                }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+
+    /*ajax запрос для получения попапа с информацией об услуге/продукте*/
+    $(document).on("click", ".products__item", function(e){
+        e.preventDefault();
+
+        let link = $(this).find('a');
+        let href  = link.attr('href')
+
+        $.ajax({
+            url: href,
+            context: document.body,
+            success: function(response){
+                $("body").addClass("hidden");
+                $(".products__popup").addClass("active");
+                $(".products__popup-content").html(response);
+            }
+        });              
+    });
+
+    /*Работа табов */
+    $(".tabs__title").on("click", function(){
+        let tabs = $(".tabs__title");
+        let tab = $(this).attr("data-tab");
+        let content = $(".tabs__block");
+
+        tabs.removeClass("active");
+        $(this).addClass("active");
+        content.each(function(){
+            if($(this).attr("data-tab") == tab) {
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active");
+            }
+        });
+    });
 });

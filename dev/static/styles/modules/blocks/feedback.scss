@@ -125,3 +125,9 @@
         }
     }
 }
+
+@media(min-width:$extralarge) {
+    .feedback {
+        margin-right: -150px;
+    }
+}

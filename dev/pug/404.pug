@@ -1,0 +1,17 @@
+extends layout/main
+include ../ui-kit/ui-product/index
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	section.section-404
+		.page-404
+			.container
+				.page-404__wrapper
+					.page-404__number 404
+					.page-404__title Страница не найдена!
+					.page-404__desc Мы приносим извинения за неудобства, но страница, которую вы ищете, больше не доступна.
+					.page-404__link
+						a(href="index.html") Вернуться на домашнюю страницу
+			

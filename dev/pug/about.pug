@@ -1,0 +1,161 @@
+extends layout/minor
+include ../ui-kit/ui-product/index
+
+block variables
+	-var title = 'О компании'
+
+block content
+	section.company-section
+		.company
+			.container
+				h2.title О компании
+				p.subtitle.subtitle--810 Балтийский Трубный Завод был запущен в октябре 2020 года на территории Индустриального парка Штальверк в г. Калининграде. 
+				
+	section.timeline-section
+		.timeline
+			.container
+				.timeline__wrapper
+					.timeline__arrows
+						a.timeline__prev prev
+						a.timeline__next next
+					.timeline__list
+						.timeline__item
+							.timeline__content
+								.timeline__date
+									.timeline__month Апрель
+									.timeline__year 2020
+								.timeline__desc Подготовка площадки под будущее производство БТЗ на территории парка Штальверк
+						.timeline__item
+							.timeline__content
+								.timeline__date
+									.timeline__month Май
+									.timeline__year 2020
+								.timeline__desc Получение сертификата качества продукции (ТУ 24.20.13-001-87103311-2020)
+						.timeline__item
+							.timeline__content
+								.timeline__date
+									.timeline__month Август
+									.timeline__year 2020
+								.timeline__desc Пуско-наладка производства, запуск линии резки рулонов на штрипс
+						.timeline__item
+							.timeline__content
+								.timeline__date
+									.timeline__month Сентябрь
+									.timeline__year 2020
+								.timeline__desc Выпуск первой партии труб
+						.timeline__item
+							.timeline__content
+								.timeline__date
+									.timeline__month Сентябрь
+									.timeline__year 2020
+								.timeline__desc Выпуск первой партии труб
+						.timeline__item
+							.timeline__content
+								.timeline__date
+									.timeline__month Сентябрь
+									.timeline__year 2020
+								.timeline__desc Выпуск первой партии труб
+						.timeline__item
+							.timeline__content
+								.timeline__date
+									.timeline__month Сентябрь
+									.timeline__year 2020
+								.timeline__desc Выпуск первой партии труб
+						.timeline__item.timeline__empty
+
+
+	section.company-section
+		.company
+			.container
+				h2.title стратегические приоритеты
+				p.subtitle.subtitle--1040 БТЗ стремится стать лидером рынка трубного проката на рынке Калининградской области и рынке европейских государств. Мы стремимся стать компанией первого выбора для клиентов, сотрудников и партнеров, основываясь на четырех стратегических приоритетах:
+
+	section.advantages-section
+		.container
+			.advantages
+				ul.advantages__list.advantages__list--grid-2
+					li.advantages__item
+						.advantages__icon
+							img(src="static/images/common/wall-clock.svg")
+						.advantages__title Новые возможности
+						.advantages__desc-mobile Современное оборудование и собственное производство
+						.advantages__desc-desktop Новые бизнес-модели и технологические новинки для быстрого выхода на рынок новой продукции и принятия различных управленческих решений.
+
+					li.advantages__item
+						.advantages__icon
+							img(src="static/images/common/quality.svg")
+						.advantages__title Снижение затрат
+						.advantages__desc-mobile Производственные мощности до 5000 тонн трубного проката 
+						.advantages__desc-desktop Расположение завода на территории Калининградской области позволяет клиентам экономить на логистике, сокращает время поставки и обеспечивает оптимальное соотношение цены и качества.
+
+					li.advantages__item
+						.advantages__icon
+							img(src="static/images/common/order.svg")
+						.advantages__title Клиентоориентированность
+						.advantages__desc-mobile Завод на территории Калининградской области
+						.advantages__desc-desktop Обеспечение наших клиентов уникальными решениями, основанных на глубоком понимании их потребностей и развитие всесторонних взаимовыгодных отношений с клиентами является одним из направлений повышения эффективности деятельности Компании. Мы достойно относимся и высоко ценим лояльность наших клиентов и поставщиков. Мы обеспечиваем клиентам дополнительные выгоды от использования нашей продукции.
+
+					li.advantages__item
+						.advantages__icon
+							img(src="static/images/common/cube.svg")
+						.advantages__title Социальная ответственность
+						.advantages__desc-mobile Завод на территории Калининградской области 
+						.advantages__desc-desktop Создание привлекательной среды, в которой люди быстрее достигают лучших результатов. Социальная ответственность Компании как работодателя основана на формировании благоприятных условий труда и жизни работников. Компания создает современные рабочие места, обеспечивает конкурентный уровень оплаты труда, социальные гарантии. БТЗ стремится не только обеспечивать достойное положение сотрудников, но и содействовать социально-экономическому развитию региона.
+
+	section.company-section.section--large-p
+		.company
+			.container
+				h2.title наши партнеры
+				.logos
+					ul.logos__list.logos__list--grid-2
+						li.logos__item
+							img(src="static/images/common/logo 2.png")
+						li.logos__item
+							img(src="static/images/common/logo 3.png")
+						li.logos__item
+							img(src="static/images/common/logo 4.png")
+						li.logos__item
+							img(src="static/images/common/logo 5.png")
+
+	section.contacts-section
+		.container
+			.contacts
+				.grid
+					.grid__list.grid__list-2
+						.grid__column.grid__column--flex-center
+							h2.title Контакты
+							.contacts__block
+								.contacts__title Телефон
+								.contacts__desc 
+									a(href="tel:84012430063") +7 (4012) 43-00-63
+							.contacts__block
+								.contacts__title Почта
+								.contacts__desc 
+									a(href="mailto:info@btz-39.ru") info@btz-39.ru
+							.contacts__block 
+								.contacts__title Адрес
+								.contacts__desc 236034, Россия, г. Калининград, ул. Дзержинского, 168
+						.grid__column
+							.feedback
+								.feedback__wrapper
+									h3.feedback__title Связаться с нами
+									.feedback__desc Оставьте заявку и наш менеджер свяжется с вами для обсуждения вашего проекта
+									form.feedback__form
+										label.feedback__label
+											input(placeholder="Ваше имя" type="text" name="name")
+										label.feedback__label
+											input(placeholder="Телефон" type="text" name="phone")
+										label.feedback__label
+											input(placeholder="Почта" type="text" name="mail")
+										.feedback__submit-block
+											input.feedback__submit(type="submit" value="Оставить заявку")
+											p.feedback__small-text Отправляя данную форму, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>
+
+
+
+
+		
+				
+					
+
+			

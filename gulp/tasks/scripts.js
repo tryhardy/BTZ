@@ -10,7 +10,8 @@ const scripts = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/slick-carousel/slick/slick.min.js',
   'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-  'dev/static/js/main.js'
+  'dev/static/js/main.js',
+  'dev/static/js/*'
 ];
 
 module.exports = function script() {

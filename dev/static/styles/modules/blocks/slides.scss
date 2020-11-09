@@ -1,14 +1,17 @@
 .slides {
     position: relative;
+    min-width: 140vw;
     
     &__item {
         height: 70vw;
-        margin-right: 15.2vw;
-        margin-left: -15vw;
+        // margin-right: 15.2vw;
+        // margin-left: -15vw;
+        margin-right: 5px;
         outline: none;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
 
         img {
             width: 100%;
@@ -22,14 +25,34 @@
     &__arrows {
         display: none;
     }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .4;
+        background-color: $blue;
+        transition: .2s;
+    }
+
+    
+    .slick-current {
+        .slides__bg {
+            opacity: 0;
+        }
+    }  
 }
+  
+
 
 @media(min-width:$large){
     .slides {
+        min-width: 140vw;
+
         &__item {
             height: 50vw;
-            margin-right: 25.2vw;
-            margin-left: -25vw;
         }
 
         &__arrows {
@@ -37,7 +60,7 @@
             align-items: center;
             position: absolute;
             bottom: 30px;
-            right: 30px;
+            right: 45vw;
             font-size: 0;
 
             a {

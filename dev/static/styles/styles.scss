@@ -7,15 +7,20 @@
 
 html {
   background-color: #F1F1F1;
+  height: 100%;
 }
 
 body {
-
+  height: 100%;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: 'Fira Sans', Arial, serif;
   font-size: 14px;
+}
+
+.hidden {
+  overflow: hidden;
 }
 
 button {
@@ -82,8 +87,15 @@ p {
   }
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .content {
   margin-top: 45px;
+  flex: 1;
 }
 
 .about-section {
@@ -103,12 +115,22 @@ p {
   color: white;
 }
 
-.products-section {
+.contacts-section {
+  overflow: hidden;
+}
+
+.confidential-section {
   padding: 40px 0;
 }
 
-.contacts-section {
+
+.contacts-section,
+.company-section,
+.products-section {
   padding: 40px 0;
+}
+.timeline-section {
+  overflow: hidden;
 }
 
 .title {
@@ -116,7 +138,7 @@ p {
   font-weight: 600;
   font-size: 20px;
   line-height: 120%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
@@ -141,7 +163,10 @@ p {
 @media(min-width:$medium) {
   .about-section {
     padding: 80px 0;
+  }
 
+  .timeline-section {
+    padding-bottom: 90px;
   }
 
   .advantages-section {
@@ -150,6 +175,31 @@ p {
 }
 
 @media(min-width:$large) {
+  .confidential-section {
+    padding: 120px 0;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .section {
+    &--large-p {
+      padding: 130px 0 120px 0;
+    }
+  }
+
+  .subtitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+    
+    &--810 {
+        max-width: 810px;
+    }
+    &--1040 {
+      max-width: 1040px;
+    }
+  }
 
   .about-section {
     padding: 80px 0;

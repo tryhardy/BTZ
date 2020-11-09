@@ -1,0 +1,156 @@
+extends layout/minor
+include ../ui-kit/ui-product/index
+
+block variables
+	-var title = 'Продукция и услуги'
+
+block content
+	section.products-section
+		.container
+			h2.title Продукция и услуги
+			.products
+				.products__popup
+					.products__popup-wrapper
+						.products__popup-close
+						.products__popup-content
+				ul.products__list
+					li.products__item(style="background-image:url(static/images/content/metal.png)")
+						a(href="product.html")
+							.products__content
+								.products__title Трубы круглые
+								.products__desc Толщина стенок от 2 до 4 мм., длина от 4 до 12м. 
+							.products__hover
+								.products__hover-wrapper
+									.products__title Трубы круглые
+									.products__desc Квадратные стальные электросварные трубы общего назначения изготавливаются из углеродистой стали в соответствии с ГОСТ 8639-82, ГОСТ 13663-86, ТУ 1373-013-02949352-2011, ТУ 1373-032-02949352-2013
+
+					li.products__item(style="background-image:url(static/images/content/metal-2.png)")
+						a(href="product.html")
+							.products__content
+								.products__title Трубы квадратные
+								.products__desc Толщина стенок от 2 до 4 мм., длина от 4 до 12м. 
+							.products__hover
+								.products__hover-wrapper
+									.products__title Трубы круглые
+									.products__desc Квадратные стальные электросварные трубы общего назначения изготавливаются из углеродистой стали в соответствии с ГОСТ 8639-82, ГОСТ 13663-86, ТУ 1373-013-02949352-2011, ТУ 1373-032-02949352-2013
+
+					li.products__item(style="background-image:url(static/images/content/metal-3.png)")
+						a(href="product.html")
+							.products__content
+								.products__title Трубы прямоугольные
+								.products__desc Толщина стенок от 2 до 4 мм., длина от 4 до 12м. 
+							.products__hover
+								.products__hover-wrapper
+									.products__title Трубы круглые
+									.products__desc Квадратные стальные электросварные трубы общего назначения изготавливаются из углеродистой стали в соответствии с ГОСТ 8639-82, ГОСТ 13663-86, ТУ 1373-013-02949352-2011, ТУ 1373-032-02949352-2013
+
+					li.products__item(style="background-image:url(static/images/content/metal-4.png)")
+						a(href="product.html")
+							.products__content
+								.products__title Роспуск рулонной стали на штрипс
+								.products__desc Толщина стенок от 2 до 4 мм., длина от 4 до 12м.
+							.products__hover
+								.products__hover-wrapper
+									.products__title Трубы круглые
+									.products__desc Квадратные стальные электросварные трубы общего назначения изготавливаются из углеродистой стали в соответствии с ГОСТ 8639-82, ГОСТ 13663-86, ТУ 1373-013-02949352-2011, ТУ 1373-032-02949352-2013
+
+	section.tabs-section
+			.container
+				h2.title Сертификаты на продукцию и лицензии
+				p Одним из главных условий сохранения конкурентоспособности компании является наличие сертификатов, подтверждающих соответствие международным стандартам как систем управления качеством, так и качества самих продуктов.
+			.tabs
+
+				
+				.tabs__wrapper
+					.container
+						ul.tabs__titles
+							li.tabs__title.active(data-tab="0") Сертификаты
+							li.tabs__title(data-tab="1") Лицензии
+							li.tabs__title(data-tab="2") Справка по сертификации продукции
+					.tabs__content
+						.tabs__block.active(data-tab="0")
+							.images
+								.images__wrapper
+									.images__list
+										.images__item
+											a(href="static/images/content/cert-1.png" data-fancybox="cert")
+												img(src="static/images/content/cert-1.png" )
+										.images__item
+											a(href="static/images/content/cert-2.png" data-fancybox="cert")
+												img(src="static/images/content/cert-2.png")
+										.images__item
+											a(href="static/images/content/cert-3.png" data-fancybox="cert")
+												img(src="static/images/content/cert-3.png")
+										.images__item
+											a(href="static/images/content/cert-4.png" data-fancybox="cert")
+												img(src="static/images/content/cert-4.png")
+
+						.tabs__block(data-tab="1")
+							.images
+								.images__wrapper
+									.images__list
+										.images__item
+											a(href="static/images/content/cert-1.png" data-fancybox="lic")
+												img(src="static/images/content/cert-1.png")
+										.images__item
+											a(href="static/images/content/cert-2.png" data-fancybox="lic")
+												img(src="static/images/content/cert-2.png")
+										.images__item
+											a(href="static/images/content/cert-3.png" data-fancybox="lic")
+												img(src="static/images/content/cert-3.png")
+										.images__item
+											a(href="static/images/content/cert-4.png" data-fancybox="lic")
+												img(src="static/images/content/cert-4.png")
+
+						.tabs__block(data-tab="2")
+							.images
+								.images__wrapper
+									.images__list
+										.images__item
+											a(href="static/images/content/cert-1.png" data-fancybox="info")
+												img(src="static/images/content/cert-1.png")
+										.images__item
+											a(href="static/images/content/cert-2.png" data-fancybox="info")
+												img(src="static/images/content/cert-2.png")
+										.images__item
+											a(href="static/images/content/cert-3.png" data-fancybox="info")
+												img(src="static/images/content/cert-3.png")
+										.images__item
+											a(href="static/images/content/cert-4.png" data-fancybox="info")
+												img(src="static/images/content/cert-4.png")
+	section.contacts-section
+		.container
+			.contacts
+				.grid
+					.grid__list.grid__list-2
+						.grid__column.grid__column--flex-center
+							h2.title Контакты
+							.contacts__block
+								.contacts__title Телефон
+								.contacts__desc 
+									a(href="tel:84012430063") +7 (4012) 43-00-63
+							.contacts__block
+								.contacts__title Почта
+								.contacts__desc 
+									a(href="mailto:info@btz-39.ru") info@btz-39.ru
+							.contacts__block 
+								.contacts__title Адрес
+								.contacts__desc 236034, Россия, г. Калининград, ул. Дзержинского, 168
+						.grid__column
+							.feedback
+								.feedback__wrapper
+									h3.feedback__title Связаться с нами
+									.feedback__desc Оставьте заявку и наш менеджер свяжется с вами для обсуждения вашего проекта
+									form.feedback__form
+										label.feedback__label
+											input(placeholder="Ваше имя" type="text" name="name")
+										label.feedback__label
+											input(placeholder="Телефон" type="text" name="phone")
+										label.feedback__label
+											input(placeholder="Почта" type="text" name="mail")
+										.feedback__submit-block
+											input.feedback__submit(type="submit" value="Оставить заявку")
+											p.feedback__small-text Отправляя данную форму, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>
+
+
+
