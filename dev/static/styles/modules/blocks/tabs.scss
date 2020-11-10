@@ -66,6 +66,15 @@
     }
 }
 
+@media(min-width: $small){
+    .tabs {
+        // &__content {
+        //     height: 60vw;
+        // }
+    }
+
+}
+
 @media(min-width: $medium){
     .tabs {
         &__content {

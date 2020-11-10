@@ -63,10 +63,12 @@
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: -9999;
         padding: 20px;
         opacity: 0;
         transition: opacity .3s;
+        background-color: #f1f1f1;
+        z-index: 9999;
+        visibility: hidden;
 
         &-wrapper {
             width: 100%;
@@ -74,6 +76,8 @@
             display: block;
             background-color: white;
             padding: 25px 20px;
+            max-width: 1180px;
+            margin: auto;
         }
 
         &-close {
@@ -123,7 +127,7 @@
 
     &__popup.active {
         opacity: 1;
-        z-index: 9999;
+        visibility: visible;
     }
 }
 
@@ -181,14 +185,13 @@
         }
 
         &__popup{
-            top: 0;
             overflow-x: scroll;
 
             &-wrapper {
                 padding: 70px 160px 80px 160px;
                 max-width: 1160px;
                 margin: auto;
-                margin-top: 140px;
+                margin-top: 30px;
                 position: relative;
             }
 
@@ -216,6 +219,12 @@
             bottom: 20px;
             right: auto;
             left: 500px;
+        }
+    }
+
+    .products {
+        &__popup {
+            top: 95px;
         }
     }
 }

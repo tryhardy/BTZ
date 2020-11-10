@@ -2,6 +2,12 @@
     background-color: white;
     padding: 25px 20px;
 
+    .success {
+        font-size: 16px;
+    font-weight: 600;
+    color: #11bb11;
+    }
+
     &__title {
         font-style: normal;
         font-weight: 600;
@@ -42,6 +48,16 @@
             font-size: 14px;
             line-height: 131.5%;
         }
+    }
+
+    input.error {
+        border-bottom: 1px solid red;
+    }
+
+    label.error {
+        font-size: 14px;
+    color: red;
+    font-weight: 500;
     }
 
     input[type="submit"] {
@@ -99,7 +115,7 @@
         }
 
         input {
-            margin-bottom: 25px;
+            //margin-bottom: 25px;
             font-size: 20px;
 
             &::placeholder {
@@ -122,6 +138,56 @@
             padding: 18px 30px;
             font-size: 16px;
             width: fit-content;
+        }
+    }
+
+    .feedback-section {
+        width: 100%;
+        .feedback {
+            margin: auto;
+            margin-top: -70px;
+            padding: 40px;
+            max-width: 1152px;
+
+            &__title {
+                font-size: 34px;
+                line-height: 62px;
+                margin-bottom: 0;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            &__wrapper {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            &__desc {
+                text-align: center;
+                color: #5F5F5F;;
+            }
+
+            &__small-text {
+                max-width: 315px;
+            }
+
+            input {
+                margin-bottom: 0;
+            }
+
+            input[type="submit"] {
+                margin-top: 0;
+            }
+
+            &__submit-block {
+                margin-top: 35px;
+                margin-bottom: 20px;
+            }
+
+            &__form {
+                max-width: 570px;
+                margin: auto;
+            }
         }
     }
 }

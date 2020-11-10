@@ -1,0 +1,42 @@
+extends layout/minor
+include ../ui-kit/ui-new/index
+include ../ui-kit/ui-nav/index
+
+block variables
+	-var title = 'Новости'
+
+block content
+	section.news-section
+		.container
+			.news
+				h1.title Новости
+				.news__tabs
+					ul.news__tabs-list
+						li.news__tabs-item.active
+							a(href="news.html") Все новости
+						li.news__tabs-item
+							a(href="news.html") 2020
+						li.news__tabs-item
+							a(href="news.html") 2019
+
+				.news__popup
+					.news__popup-wrapper
+						.news__popup-close
+						.news__popup-content
+				
+				.news__list
+					+new("В ИП ШТАЛЬВЕРК ИДЕТ УСТАНОВКА БАЛТИЙСКОГО ТРУБНОГО ЗАВОДА", "9 окт. 2020", "static/images/content/new-1.png", "Весной Индустриальный парк Штальверк начал готовить площадку под будущее производство, на участок была подведена электроэнергия, а в этом месяце завершился процесс установки станков.")
+					+new("Начал работу Балтийский трубный завод", "12 сен. 2020", "static/images/content/new-2.png", "С октября на территории Калининградской области при поддержке Балтийского металлообрабатывающего кластера запустил свое производство первый в регионе завод по производству труб из черного металла...")
+					+new("Начал работу Балтийский трубный завод", "23 авг. 2020", "static/images/content/new-3.png", "С октября на территории Калининградской области при поддержке Балтийского металлообрабатывающего кластера запустил свое производство первый в регионе завод по производству труб из черного металла...")
+					+new("В ИП ШТАЛЬВЕРК ИДЕТ УСТАНОВКА БАЛТИЙСКОГО ТРУБНОГО ЗАВОДА", "7 авг. 2020", "static/images/content/new-4.png", "Весной Индустриальный парк Штальверк начал готовить площадку под будущее производство, на участок была подведена электроэнергия, а в этом месяце завершился процесс установки станков.")
+					+new("В ИП ШТАЛЬВЕРК ИДЕТ УСТАНОВКА БАЛТИЙСКОГО ТРУБНОГО ЗАВОДА", "23 авг. 2020", "static/images/content/new-5.png", "Весной Индустриальный парк Штальверк начал готовить площадку под будущее производство, на участок была подведена электроэнергия, а в этом месяце завершился процесс установки станков.")
+					+new("Начал работу Балтийский трубный завод", "7 авг. 2020", "static/images/content/new-6.png", "Весной Индустриальный парк Штальверк начал готовить площадку под будущее производство, на участок была подведена электроэнергия, а в этом месяце завершился процесс установки станков.")
+
+				.navigation
+					span.navigation__arrow.navigation__arrow--prev.navigation__arrow--disabled
+					.navigation__pages
+						a.navigation__page.navigation__current-page 1
+						a.navigation__page(href="#") 2
+						span.navigation__space ...
+						a.navigation__page(href="#") 10
+					a(href="catalog.html").navigation__arrow.navigation__arrow--next.navigation__arrow--disabled

@@ -1,0 +1,10 @@
+mixin new(name, date, img, desc)
+    .news__item
+        a(href="new.html")
+            .news__top
+                .news__picture
+                    img(src=`${img}`)
+                .news__date= date
+            .news__content
+                h4.news__title= name
+                .news__desc= desc

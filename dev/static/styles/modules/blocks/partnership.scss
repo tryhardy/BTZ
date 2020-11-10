@@ -1,0 +1,51 @@
+.partnership {
+    .title {
+        font-size: 23px;
+    }
+
+    .info-section {
+        margin-bottom: 30px;
+    }
+
+    .grid__title {
+        font-size: 18px;
+    }
+
+    .grid__picture {
+        height: 63vw;
+        
+        img {
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+@media (min-width:$large){
+    .partnership {
+        .company-section {
+            padding: 120px 0;
+        }
+
+        .title {
+            font-size: 59px;
+            margin-bottom: 20px;
+        }
+
+        .grid__picture {
+            height: 25vw;
+            max-height: 330px;
+        }
+
+        .grid__title {
+            font-size: 34px;
+        }
+
+        .info-section {
+            margin-bottom: 0;
+            padding-bottom: 40px;
+        }
+    }
+}

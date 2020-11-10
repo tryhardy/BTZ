@@ -38,6 +38,27 @@
             &-2 {
                 grid-template-columns: 377px 1fr;
             }
+
+            &-3 {
+                grid-template-columns: 470px 1fr;
+                grid-template-rows: min-content 1fr;
+                grid-template-areas: 
+                "picture name"
+                "picture desc";
+                grid-gap: 20px 40px;
+            }
+        }
+
+        &__name {
+            grid-area: name;
+        }
+
+        &__pic {
+            grid-area: picture;
+        }
+
+        &__desc {
+            grid-area: desc;
         }
 
         &__title {

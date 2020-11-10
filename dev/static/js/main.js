@@ -73,7 +73,7 @@ $(document).ready(function(){
             {
               breakpoint: 768,
               settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
                 slidesToScroll: 2
               }
             },
@@ -133,6 +133,27 @@ $(document).ready(function(){
                 $("body").addClass("hidden");
                 $(".products__popup").addClass("active");
                 $(".products__popup-content").html(response);
+                $(".products__popup")[0].scrollTop = 0;
+            }
+        });              
+    });
+
+
+    /*ajax запрос для получения попапа с информацией о новости*/
+    $(document).on("click", ".news__item", function(e){
+        e.preventDefault();
+
+        let link = $(this).find('a');
+        let href  = link.attr('href')
+
+        $.ajax({
+            url: href,
+            context: document.body,
+            success: function(response){
+                $("body").addClass("hidden");
+                $(".news__popup").addClass("active");
+                $(".news__popup-content").html(response);
+                $(".news__popup")[0].scrollTop = 0;
             }
         });              
     });
@@ -152,5 +173,25 @@ $(document).ready(function(){
                 $(this).removeClass("active");
             }
         });
+    });
+
+    $(".circle-button__close").on('click', function(){
+        $(".circle-button").css("display", "none");
+    });
+
+    /*Работа куков*/
+    let cookies = document.cookie;
+    if(cookies.indexOf("cookie=accepted") == -1) {
+        $(".cookie").css("visibility", "visible");
+    }
+
+    $("#cookie-close").on("click", function(){
+        $(".cookie").css("display", "none");
+    });
+
+    $("#cookie-ok").on("click",  function(){
+        $(".cookie").css("display", "none");
+        document.cookie = "cookie=accepted;";
+        document.cookie = "1=2;";
     });
 });

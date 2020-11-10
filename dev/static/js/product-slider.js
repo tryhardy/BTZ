@@ -17,6 +17,13 @@ $(".products__popup").on('click', function(e){
     }
 });
 
+$(".button").on("click", function(){
+    $(".hamburger").addClass("active");
+    $(".hamburger").attr("data-popup", "open");
+    $(".popup").addClass("active");
+    closingPopup();
+});
+
 
 function closingPopup()
 {

@@ -1,0 +1,70 @@
+extends layout/minor
+
+block variables
+	-var title = 'Контакты'
+
+block content
+	section.contacts-section
+		.container
+			.contacts
+				.grid
+					.grid__list.grid__list-2
+						.grid__column.grid__column--flex-center
+							h1.title Контакты
+							.contacts__block
+								.contacts__title Телефон
+								.contacts__desc 
+									a(href="tel:84012430063") +7 (4012) 43-00-63
+							.contacts__block
+								.contacts__title Почта
+								.contacts__desc 
+									a(href="mailto:info@btz-39.ru") info@btz-39.ru
+							.contacts__block 
+								.contacts__title Адрес
+								.contacts__desc 236034, Россия, г. Калининград, ул. Дзержинского, 168
+						.grid__column
+							.feedback
+								.feedback__wrapper
+									h3.feedback__title Связаться с нами
+									.feedback__desc Оставьте заявку и наш менеджер свяжется с вами для обсуждения вашего проекта
+									form()#contacts-form.feedback__form
+										label.feedback__label
+											input(placeholder="Ваше имя" type="text" name="name")
+										label.feedback__label
+											input(placeholder="Телефон" type="text" name="phone")
+										label.feedback__label
+											input(placeholder="Почта" type="text" name="mail")
+										.feedback__submit-block
+											input.feedback__submit(type="submit" value="Оставить заявку")
+											p.feedback__small-text Отправляя данную форму, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>
+									
+
+	section.team-section
+		.container
+			.team
+				h2.title Команда
+				ul.team__list
+					li.team__item
+						.team__picture
+							img(src="static/images/content/team-1.png")
+						.team__title Буров Владимир
+						.team__desc Генеральный директор<br> v.burov@btz-39.ru
+					li.team__item
+						.team__picture
+							img(src="static/images/content/team-2.png")
+						.team__title Смородина Мария
+						.team__desc Офис-менеджер<br> m.smorodina@btz-39.ru
+					li.team__item
+						.team__picture
+							img(src="static/images/content/team-3.png")
+						.team__title Химич Имя
+						.team__desc Должность<br> v.burov@btz-39.ru
+
+
+	section.map-section
+		#map
+
+	.cookie
+		.cookie__close#cookie-close
+		.cookie__message Мы используем файлы <a target="_blank" href="https://ru.wikipedia.org/wiki/Cookie#:~:text=%D0%9A%D1%83%CC%81%D0%BA%D0%B8%20(%D0%B0%D0%BD%D0%B3%D0%BB.%20cookie%2C%20%D0%B1%D1%83%D0%BA%D0%B2%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE,%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%83%20%D0%B2%20%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B5%20HTTP%2D%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0.">cookie</a> для того, чтобы предоставить Вам больше возможностей при использовании сайта.
+		button#cookie-ok.cookie__button.button.button--small Понятно

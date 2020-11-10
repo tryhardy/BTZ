@@ -1,0 +1,50 @@
+.cookie {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    left:50%;
+    transform: translateX(-50%);
+    max-width:865px;
+    background-color: #ffffffeb;
+    padding: 20px;
+
+    &__message {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        color: #5F5F5F;
+
+        a {
+            color: $blue;
+        }
+    }
+
+    &__close {
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.7758 12.8981L18.7078 20.8301L20.8291 18.7088L12.8971 10.7768L20.8299 2.84398L18.7086 0.722656L10.7758 8.65543L2.843 0.722656L0.72168 2.84398L8.65446 10.7768L0.72245 18.7088L2.84377 20.8301L10.7758 12.8981Z' fill='%23124F9D'/%3E%3C/svg%3E");
+        position: absolute;
+        right: -30px;
+        top: 5px;
+        width: 16px;
+        height: 15px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .button {
+        margin: 0;
+        margin: 0;
+        border: 0;
+        PADDING: 18PX 33PX;
+    }
+}
+
+@media (min-width:$large){
+    .cookie {
+        display: flex;
+        align-items: center;
+    }
+}
+

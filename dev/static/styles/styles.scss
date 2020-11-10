@@ -115,7 +115,8 @@ p {
   color: white;
 }
 
-.contacts-section {
+.contacts-section,
+.slides-section {
   overflow: hidden;
 }
 
@@ -126,11 +127,17 @@ p {
 
 .contacts-section,
 .company-section,
-.products-section {
+.products-section,
+.news-section {
   padding: 40px 0;
 }
 .timeline-section {
   overflow: hidden;
+}
+
+.feedback-section {
+  background-color: $blue;
+  padding: 20px 0;
 }
 
 .title {
@@ -140,6 +147,14 @@ p {
   line-height: 120%;
   margin-bottom: 20px;
   text-transform: uppercase;
+}
+h1.title {
+  font-size: 23px;
+  margin-bottom: 30px;
+}
+h2.title {
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .container {
@@ -175,6 +190,19 @@ p {
 }
 
 @media(min-width:$large) {
+  .news-section {
+    padding: 120px 0 100px 0;
+  }
+
+  .feedback-section {
+    max-height: 390px;
+    margin: 150px 0;
+  }
+
+  .team-section {
+    padding-bottom: 130px;
+  }
+
   .confidential-section {
     padding: 120px 0;
 
@@ -195,6 +223,9 @@ p {
     
     &--810 {
         max-width: 810px;
+    }
+    &--970 {
+      max-width: 970px;
     }
     &--1040 {
       max-width: 1040px;
@@ -229,6 +260,16 @@ p {
     font-size: 44px;
     line-height: 131.5%;
     margin-bottom: 50px;
+  }
+
+  h1.title {
+    font-size: 59px;
+    margin-bottom: 50px;
+  }
+
+  h2.title {
+    font-size: 44px;
+    margin-bottom: 40px;
   }
 
   .products{
