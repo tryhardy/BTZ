@@ -27,9 +27,12 @@
 
     $(".feedback__form").on("submit", function(e){
         e.preventDefault();
-        if($(this).valid()){
-            $("<div class='success'>Сообщение отправлено</div>").appendTo($(this));
-        }
+        let successContainer = $("<div class='success'>");
+        $("div.success").detach();
         
+        if($(this).valid()){
+            successContainer.html("Сообщение отправлено");
+            $(successContainer).appendTo($(this));
+        } 
     });
 })()
